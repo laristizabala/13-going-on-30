@@ -146,7 +146,7 @@ const toggleFlip = () => {
 .flip-card {
   background-color: transparent;
   width: 266px;
-  height: 473px;
+  height: 490px;
   perspective: 1000px;
   font-family: sans-serif;
 }
