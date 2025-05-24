@@ -1,14 +1,11 @@
 <script setup>
-import HelloWorld from "./components/Card.vue";
+import Card from "./components/Card.vue";
 </script>
 
 <template>
-  <HelloWorld class="card" />
+  <Card  />
 </template>
 
 <style scoped>
-.card {
-  font-family: "Montserrat", sans-serif;
-  font-size: 10px;
-}
+
 </style>
