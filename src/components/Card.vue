@@ -107,6 +107,15 @@
           <p class="flip-card-back__paragraph--text-white">
             Bebidas alcohólicas para compartir ;)
           </p>
+          <p class="flip-card-back__confirm">
+            <b
+              ><a
+                target="_blank"
+                href="https://api.whatsapp.com/send/?phone=573172584848"
+                >Confirma tu asistencia</a
+              ></b
+            >
+          </p>
           <p class="flip-card-back__subtitle">
             "No es solo una fiesta, es una<br /><b>película</b>... y tú estás
             <b>invitado</b><br />
@@ -259,6 +268,21 @@ const toggleFlip = () => {
   color: #856695;
   font-weight: bold;
 }
+.flip-card-back__confirm {
+  margin: 0;
+}
+.flip-card-back__confirm a {
+  font-size: 12px;
+  color: #856695;
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+.flip-card-back__confirm a:hover {
+  text-decoration-line: underline;
+  filter: drop-shadow(0 0 0.5em #ffffffd7);
+}
+
 .flip-card-back__subtitle {
   color: #856695;
   font-size: 12px;
