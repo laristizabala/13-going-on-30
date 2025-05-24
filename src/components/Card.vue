@@ -3,83 +3,87 @@
     <div class="flip-card">
       <div :class="['flip-card-inner', { flipped: isFlipped }]">
         <div class="flip-card-front">
-          <img
-            class="star star--1"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
-          <img
-            class="star star--2"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
-          <img
-            class="star star--3"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
-          <img
-            class="star star--4"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
-          <img
-            class="star star--5"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
-          <img
-            class="star star--6"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
-          <img
-            class="star star--7"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
-          <img
-            class="star star--8"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
+          <div class="star-container">
+            <img
+              class="star star--1"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+            <img
+              class="star star--2"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+            <img
+              class="star star--3"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+            <img
+              class="star star--4"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+            <img
+              class="star star--5"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+            <img
+              class="star star--6"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+            <img
+              class="star star--7"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+            <img
+              class="star star--8"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+          </div>
           <img
             class="flip-card-front__sweet-30"
             src="../assets/images/Titulo.png"
-            alt="sweet-30"
+            alt="sweet 30"
           />
           <img
             class="flip-card-front__karen-child"
             src="../assets/images/Karen-v2.png"
-            alt="karen-child"
+            alt="karen child"
           />
         </div>
         <div class="flip-card-back">
-          <img
-            class="star star--1"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
-          <img
-            class="star star--3"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
-          <img
-            class="star star--5"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
-          <img
-            class="star star--6"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
-          <img
-            class="star star--7"
-            src="../assets/images/Estrella.png"
-            alt="estrella decorativa"
-          />
+          <div class="star-container">
+            <img
+              class="star star--1"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+            <img
+              class="star star--3"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+            <img
+              class="star star--5"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+            <img
+              class="star star--6"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+            <img
+              class="star star--7"
+              src="../assets/images/Estrella.png"
+              alt="decorative star"
+            />
+          </div>
           <h2 class="flip-card-back__title">
             Ya no tengo <b>13</b>...<br />pero aún bailo <b>Thriller</b
             ><br />como si los tuviera.<br /><b>¡Ven a mi Sweet 30!</b>
@@ -276,54 +280,82 @@ const toggleFlip = () => {
 .star {
   position: absolute;
   opacity: 0.8;
-  pointer-events: none;
-  z-index: 1;
-  filter: drop-shadow(0 0 0.5em #ffffffd7);
+  animation: flash 3s infinite ease-in-out alternate;
 }
-
+.star-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none; /* para que no bloqueen clics */
+  z-index: 2;
+}
 .star--1 {
-  top: 30px;
+  top: 18px;
   left: 30px;
   width: 30px;
+  animation-delay: 0s;
 }
 
 .star--2 {
   top: 55px;
   right: 40px;
   width: 40px;
+  animation-delay: 0s;
 }
 
 .star--3 {
   bottom: 15px;
   left: 20px;
   width: 30px;
+  animation-delay: 0s;
 }
 
 .star--4 {
   bottom: 40px;
   right: 18px;
   width: 40px;
+  animation-delay: 0s;
 }
 .star--5 {
   top: 165px;
   right: 35px;
   width: 30px;
   transform: rotate(20deg);
+  animation-delay: 0s;
 }
 .star--6 {
   bottom: 145px;
   right: 18px;
   width: 25px;
+  animation-delay: 0s;
 }
 .star--7 {
   top: 200px;
   left: 16px;
   width: 30px;
   transform: rotate(261deg);
+  animation-delay: 0s;
 }
 .star--8 {
   bottom: 145px;
   left: 18px;
   width: 20px;
+  animation-delay: 0s;
+}
+@keyframes flash {
+  0% {
+    transform: scale(1) rotate(0deg);
+    opacity: 0.5;
+  }
+  50% {
+    transform: scale(1.2) rotate(10deg);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1) rotate(-10deg);
+    opacity: 0.5;
+  }
 }
 </style>
